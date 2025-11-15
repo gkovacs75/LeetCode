@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _1456_MaximumNumberOfVowelsInASubstringOfGivenLength();
+        var r = new _2215_FindTheDifferenceOfTwoArrays();
 
         r.Run();
 
