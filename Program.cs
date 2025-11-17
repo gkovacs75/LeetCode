@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _2215_FindTheDifferenceOfTwoArrays();
+        var r = new _2390_RemovingStarsFromAString();
 
         r.Run();
 
