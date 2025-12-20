@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _2390_RemovingStarsFromAString();
+        var r = new _0735_AsteroidCollision();
 
         r.Run();
 
