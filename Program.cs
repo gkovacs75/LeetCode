@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _0735_AsteroidCollision();
+        var r = new _0649_Dota2Senate();
 
         r.Run();
 
