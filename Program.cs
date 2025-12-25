@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _0649_Dota2Senate();
+        var r = new _2095_DeleteTheMiddleNodeOfALinkedList();
 
         r.Run();
 
