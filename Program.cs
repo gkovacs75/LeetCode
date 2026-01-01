@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _2095_DeleteTheMiddleNodeOfALinkedList();
+        var r = new _0872_LeafSimilarTrees();
 
         r.Run();
 
