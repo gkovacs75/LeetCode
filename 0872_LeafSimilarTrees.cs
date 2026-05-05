@@ -13,16 +13,16 @@ namespace LeetCode
             // [3,5,1,6,2,9,8,null,null,7,4]            
             TreeNode t1_n9 = new TreeNode(4, null, null);
             TreeNode t1_n8 = new TreeNode(7, null, null);
-                     
+
             TreeNode t1_n7 = new TreeNode(8, null, null);
             TreeNode t1_n6 = new TreeNode(9, null, null);
-                     
+
             TreeNode t1_n5 = new TreeNode(2, t1_n8, t1_n9);
             TreeNode t1_n4 = new TreeNode(6, null, null);
-                     
+
             TreeNode t1_n3 = new TreeNode(1, t1_n6, t1_n7);
             TreeNode t1_n2 = new TreeNode(5, t1_n4, t1_n5);
-                     
+
             TreeNode t1_n1 = new TreeNode(3, t1_n2, t1_n3);
 
             // [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]
@@ -47,7 +47,27 @@ namespace LeetCode
 
         public bool LeafSimilar(TreeNode root1, TreeNode root2)
         {
+            var leaves1 = new List<int>();
+            var leaves2 = new List<int>();
 
+            CollectLeaves(root1, leaves1);
+            CollectLeaves(root2, leaves2);
+
+            return leaves1.SequenceEqual(leaves2);
+        }
+
+        private void CollectLeaves(TreeNode? node, List<int> leaves)
+        {
+            if (node == null) return;
+
+            if (node.left == null && node.right == null)
+            {
+                leaves.Add(node.val);
+                return;
+            }
+
+            CollectLeaves(node.left, leaves);
+            CollectLeaves(node.right, leaves);
         }
     }
 }

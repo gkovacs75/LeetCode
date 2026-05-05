@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _0872_LeafSimilarTrees();
+        var r = new _0167_TwoSum2InputArrayIsSorted();
 
         r.Run();
 
