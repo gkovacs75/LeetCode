@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _0219_ContainsDuplicate2();
+        var r = new _0026_RemoveDuplicatesFromSortedArray();
 
         r.Run();
 
