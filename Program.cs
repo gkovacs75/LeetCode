@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _0167_TwoSum2InputArrayIsSorted();
+        var r = new _0219_ContainsDuplicate2();
 
         r.Run();
 
