@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _0026_RemoveDuplicatesFromSortedArray();
+        var r = new _0028_FindTheIndexOfTheFirstOccurrenceInAString();
 
         r.Run();
 
