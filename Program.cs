@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _0028_FindTheIndexOfTheFirstOccurrenceInAString();
+        var r = new _0209_MinimumSizeSubarraySum();
 
         r.Run();
 
