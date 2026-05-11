@@ -41,7 +41,13 @@ namespace LeetCode
 
         public void Run()
         {
-            int[] nums = [2, 3, 1, 2, 4, 3];
+            //int[] nums = [2, 3, 1, 2, 4, 3];
+            //int[] nums = [1, 4, 4];
+            //int[] nums = [1, 1, 1, 1, 1, 1, 1, 1];
+            int[] nums = [5];
+            //int target = 7;
+            //int target = 4;
+            //int target = 11;
             int target = 7;
 
             var y = MinSubArrayLen(target, nums);
@@ -51,17 +57,23 @@ namespace LeetCode
 
         public int MinSubArrayLen(int target, int[] nums)
         {
-            int currentAcceptableDistance = 0;
+            if (nums[0] >= target)
+            {
+                return 1;
+            }
+            else
+            {
+                if (nums.Length == 1)
+                {
+                    return 0;
+                }
+            }
+
+            int distance = 0;
             int shortestDistance = 0;
             int i = 0;
             int j = 1;
             int sum;
-            bool found = false;
-
-            if (nums[i] == target)
-            {
-                return 1;
-            }
 
             sum = nums[i] + nums[j];
 
@@ -69,29 +81,28 @@ namespace LeetCode
             {
                 if (sum >= target)
                 {
-                    currentAcceptableDistance = j - i + 1;
-                    sum -= nums[++i];
+                    distance = j - i + 1;
+                    sum -= nums[i];
+
+                    if (distance < shortestDistance || shortestDistance == 0)
+                    {
+                        shortestDistance = distance;
+                    }
+
+                    ++i;
                 }
                 else if (sum < target)
                 {
-                    sum += nums[++j];
-                }
+                    j++;
 
-                if (currentAcceptableDistance < shortestDistance)
-                {
-                    found = true;
-                    shortestDistance = currentAcceptableDistance;
+                    if (j < nums.Length)
+                    {
+                        sum += nums[j];
+                    }
                 }
             }
 
-            if (found)
-            {
-                return shortestDistance;
-            }
-            else
-            {
-                return 0;
-            }
+            return shortestDistance;
         }
     }
 }

@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _0209_MinimumSizeSubarraySum();
+        var r = new _0594_LongestHarmoniousSubsequence();
 
         r.Run();
 
