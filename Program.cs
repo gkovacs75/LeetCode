@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _0594_LongestHarmoniousSubsequence();
+        var r = new _1652_DefuseTheBomb();
 
         r.Run();
 
