@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _0169_MajorityElement();
+        var r = new _0121_BestTimeToBuyAndSellStock();
 
         r.Run();
 
