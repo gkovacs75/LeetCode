@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _0121_BestTimeToBuyAndSellStock();
+        var r = new _0080_RemoveDuplicatesFromSortedArrayII();
 
         r.Run();
 
