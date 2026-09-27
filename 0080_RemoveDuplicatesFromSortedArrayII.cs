@@ -10,27 +10,42 @@ namespace LeetCode
     {
         public void Run()
         {
-            int[] nums = [1, 1, 1, 2, 2, 3]; // 5
+            //int[] nums = [1, 1, 1, 2, 2, 3]; // 5
+            int[] nums = [0, 0, 1, 1, 1, 1, 2, 3, 3]; // 7
 
 
             var r1 = RemoveDuplicates(nums);
-            //var r2 = RemoveDuplicates(nums);
-            //var r3 = RemoveDuplicates(nums);
-            //var r4 = RemoveDuplicates(nums);
-            //var r5 = RemoveDuplicates(nums);
-            //var r6 = RemoveDuplicates(nums);
 
             Console.WriteLine(r1);
-            //Console.WriteLine(r2);
-            //Console.WriteLine(r3);
-            //Console.WriteLine(r4);
-            //Console.WriteLine(r5);
-            //Console.WriteLine(r6);
         }
 
         public int RemoveDuplicates(int[] nums)
         {
-            return 0;
+            int p1 = 1;
+            int count = 1;
+
+            for (int p2 = 1; p2 < nums.Length; p2++)
+            {                
+                if (nums[p2] == nums[p2 - 1])
+                {
+                    count++;
+                }
+                else
+                {
+                    count = 1;
+                }
+
+                if (count <= 2)
+                {
+                    nums[p1] = nums[p2];
+
+                    p1++;
+                }
+            }
+
+            return p1;
         }
+
+
     }
 }
