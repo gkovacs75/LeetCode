@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Starting...");
 
-        var r = new _0080_RemoveDuplicatesFromSortedArrayII();
+        var r = new _0189_RotateArray();
 
         r.Run();
 
